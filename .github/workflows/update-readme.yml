@@ -1,1 +1,53 @@
 
+name: Update GitHub Portfolio
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - README.md
+      - .github/scripts/update_readme.py
+      - .github/workflows/update-readme.yml
+
+  schedule:
+    - cron: "20 5 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-portfolio:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Update projects and contribution calendar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python .github/scripts/update_readme.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md assets/contribution-calendar.svg
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update GitHub portfolio"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
