@@ -10,7 +10,7 @@
 
 ## About
 
-Développeur indépendant passionné par Linux, les systèmes et l'open source. J'explore l'intelligence artificielle locale, le développement web et l'automatisation Linux, avec une idée simple : comprendre ce que l'on utilise pour mieux construire.
+Independent developer passionate about Linux, systems and open source. I explore local artificial intelligence, web development and Linux automation, with one simple idea: understand what you use in order to build better.
 
 ---
 
