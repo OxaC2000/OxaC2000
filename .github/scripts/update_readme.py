@@ -1,4 +1,3 @@
-
 import html
 import json
 import os
@@ -36,17 +35,21 @@ def fetch_json(url, token=None):
 
 
 def badge(label, value, color=PURPLE):
-    label = urllib.parse.quote(str(label), safe="")
-    value = urllib.parse.quote(str(value), safe="")
+    def escape(text):
+        text = str(text).replace("-", "--").replace("_", "__")
+        return urllib.parse.quote(text, safe="")
+
     color = color.lstrip("#")
 
     url = (
         f"https://img.shields.io/badge/"
-        f"{label}-{value}-{color}"
-        f"?style=for-the-badge"
+        f"{escape(label)}-{escape(value)}-{color}"
+        f"?style=for-the-badge&labelColor=1A1B27"
     )
 
-    return f'<img src="{url}" alt="{label}: {value}" />'
+    alt = html.escape(f"{label}: {value}")
+
+    return f'<img src="{url}" alt="{alt}" />'
 
 
 def get_repositories(token):
@@ -75,11 +78,11 @@ def get_repositories(token):
 
 def build_project_cards(repositories):
     if not repositories:
-        return """
-<p align="center">
-  <i>No public projects available yet.</i>
-</p>
-"""
+        return (
+            '<p align="center">\n'
+            '  <i>New projects coming soon.</i>\n'
+            '</p>'
+        )
 
     cells = []
 
@@ -102,17 +105,17 @@ def build_project_cards(repositories):
             f'</a>'
         )
 
-        cell = f"""
-<td width="33%" valign="top">
-  <h3>
-    <a href="{url}">{name}</a>
-  </h3>
-  <p>{description}</p>
-  <p>{language_badge}</p>
-  <p>{stars_badge} {forks_badge}</p>
-  <p>{view_badge}</p>
-</td>
-"""
+        cell = "\n".join([
+            '<td width="33%" valign="top">',
+            '  <h3>',
+            f'    <a href="{url}">{name}</a>',
+            '  </h3>',
+            f'  <p>{description}</p>',
+            f'  <p>{language_badge}</p>',
+            f'  <p>{stars_badge} {forks_badge}</p>',
+            f'  <p>{view_badge}</p>',
+            '</td>',
+        ])
         cells.append(cell)
 
     rows = []
@@ -306,4 +309,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
