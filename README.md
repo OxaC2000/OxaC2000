@@ -106,9 +106,11 @@ Interested in understanding systems, building useful tools, automating workflows
 </p>
 
 <!-- PROJECTS:START -->
+
 <p align="center">
-  <i>Projects will appear here automatically after the GitHub Actions workflow runs.</i>
+  <i>No public projects available yet.</i>
 </p>
+
 <!-- PROJECTS:END -->
 
 <p align="center">
