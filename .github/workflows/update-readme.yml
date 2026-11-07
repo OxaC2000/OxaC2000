@@ -26,6 +26,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Debug repository files
+        run: |
+          echo "=== CURRENT DIRECTORY ==="
+          pwd
+
+          echo "=== CURRENT COMMIT ==="
+          git rev-parse HEAD
+
+          echo "=== ROOT FILES ==="
+          ls -la
+
+          echo "=== GITHUB DIRECTORY ==="
+          ls -la .github
+
+          echo "=== SCRIPTS DIRECTORY ==="
+          ls -la .github/scripts || true
+
+          echo "=== ALL GITHUB FILES ==="
+          find .github -maxdepth 3 -type f
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
