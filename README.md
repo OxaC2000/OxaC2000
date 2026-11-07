@@ -101,7 +101,7 @@ Independent developer passionate about Linux, systems and open source. I explore
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=160&section=footer&text=Low-level%20thinking.%20High-level%20engineering.&fontColor=A78BFA&fontSize=26&fontAlignY=60" alt="Footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=160&section=footer&text=Low-level%20thinking.%20High-level%20vibe%20coding.&fontColor=A78BFA&fontSize=26&fontAlignY=60" alt="Footer" width="100%" />
 
 <a href="https://github.com/OxaC2000"><img src="https://img.shields.io/badge/GitHub-OxaC2000-1A1B27?style=for-the-badge&logo=github&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="GitHub OxaC2000" /></a>
 
