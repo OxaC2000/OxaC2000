@@ -77,12 +77,12 @@ def get_owned_repositories(token):
 def get_repositories(token):
     repositories = get_owned_repositories(token)
 
+    # Forks and the portfolio repository are now allowed.
+    # Only archived and disabled repositories are excluded.
     selected = [
         repo for repo in repositories
-        if not repo["fork"]
-        and not repo["archived"]
+        if not repo["archived"]
         and not repo["disabled"]
-        and repo["name"].lower() != USERNAME.lower()
     ]
 
     selected.sort(
