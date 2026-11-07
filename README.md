@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=220&section=header&text=OxaC2000&fontColor=A78BFA&fontSize=64&fontAlignY=40&desc=Low-level%20thinking.%20High-level%20vibe coding.&descSize=20&descColor=C0CAF5&descAlignY=65" alt="OxaC2000 header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=220&section=header&text=OxaC2000&fontColor=A78BFA&fontSize=64&fontAlignY=40&desc=Low-level%20thinking.%20High-level%20vibe%20coding.&descSize=20&descColor=C0CAF5&descAlignY=65" alt="OxaC2000 header" width="100%" />
 
 **Open Source Developer** · **Independent Developer** · **Linux Enthusiast**
 
