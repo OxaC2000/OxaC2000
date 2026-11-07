@@ -96,41 +96,6 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## Engineering Principles
-
-<table align="center">
-  <tr>
-    <td width="33%" valign="top">
-      <h3>Understand</h3>
-      Understand how systems work instead of relying blindly on abstractions.
-    </td>
-    <td width="33%" valign="top">
-      <h3>Simplify</h3>
-      Prefer clear, maintainable and purposeful solutions.
-    </td>
-    <td width="33%" valign="top">
-      <h3>Experiment</h3>
-      Explore technologies, test ideas and learn continuously.
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <h3>Build</h3>
-      Create useful tools and meaningful projects.
-    </td>
-    <td valign="top">
-      <h3>Share</h3>
-      Value open source, collaboration and shared knowledge.
-    </td>
-    <td valign="top">
-      <h3>Control</h3>
-      Understand and customize the environment you work in.
-    </td>
-  </tr>
-</table>
-
----
-
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=160&section=footer&text=Low-level%20thinking.%20High-level%20engineering.&fontColor=A78BFA&fontSize=26&fontAlignY=60" alt="Footer" width="100%" />
