@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="144" viewBox="0 0 800 144">
+<rect x="0.5" y="0.5" width="799" height="143" rx="22" fill="#1A1B27" stroke="#2A2E45"/>
+<g font-family="Arial, sans-serif">
+<text x="30" y="40" fill="#B4A5F0" font-size="19" font-weight="700">VERN</text>
+<text x="770" y="39" fill="#787C99" font-size="12" text-anchor="end">View repository  ›</text>
+<text x="30" y="68" fill="#9AA5CE" font-size="13">VΞRN is a static, self-hosted knowledge site about technology: operating systems, desktop</text>
+<text x="30" y="87" fill="#9AA5CE" font-size="13">environments, protocols, tools and the concepts around them. It documents rather than advertises.</text>
+<rect x="30" y="98" width="108" height="28" rx="14" fill="#24283B"/>
+<circle cx="46" cy="112" r="4.5" fill="#9D7CD8"/>
+<text x="58" y="116.5" fill="#C0CAF5" font-size="12">JavaScript</text>
+<rect x="148" y="98" width="52" height="28" rx="14" fill="#24283B"/>
+<polygon points="164,105 166.4,110.2 172,110.8 167.8,114.6 169,120 164,117.2 159,120 160.2,114.6 156,110.8 161.6,110.2" fill="#8F86C9"/>
+<text x="180" y="116.5" fill="#C0CAF5" font-size="12">0</text>
+<rect x="210" y="98" width="52" height="28" rx="14" fill="#24283B"/>
+<g fill="none" stroke="#8F86C9" stroke-width="1.6" stroke-linecap="round"><circle cx="221" cy="106" r="2.4"/><circle cx="231" cy="106" r="2.4"/><circle cx="226" cy="119" r="2.4"/><path d="M221,108.4 v2.6 q0,3 5,3.2 q5,-0.2 5,-3.2 v-2.6 M226,114.2 v2.4"/></g>
+<text x="242" y="116.5" fill="#C0CAF5" font-size="12">0</text>
+</g></svg>

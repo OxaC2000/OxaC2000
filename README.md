@@ -39,29 +39,12 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 ## Featured Projects
 
 <!-- PROJECTS:START -->
-<table>
-<tr>
-<td width="33%" valign="top">
-  <h3>
-    <a href="https://github.com/OxaC2000/OxaC2000">OxaC2000</a>
-  </h3>
-  <p>No description provided.</p>
-  <p><img src="https://img.shields.io/badge/LANGUAGE-Other-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="LANGUAGE: Other" /></p>
-  <p><img src="https://img.shields.io/badge/STARS-0-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="STARS: 0" /> <img src="https://img.shields.io/badge/FORKS-0-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="FORKS: 0" /></p>
-  <p><a href="https://github.com/OxaC2000/OxaC2000"><img src="https://img.shields.io/badge/VIEW-REPOSITORY-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="VIEW: REPOSITORY" /></a></p>
-</td>
-<td width="33%" valign="top">
-  <h3>
-    <a href="https://github.com/OxaC2000/VERN">VERN</a>
-  </h3>
-  <p>VΞRN is a static, self-hosted knowledge site about technology: operating systems, desktop environments, protocols, tools and the concepts around them. It documents rather than advertises.</p>
-  <p><img src="https://img.shields.io/badge/LANGUAGE-JavaScript-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="LANGUAGE: JavaScript" /></p>
-  <p><img src="https://img.shields.io/badge/STARS-0-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="STARS: 0" /> <img src="https://img.shields.io/badge/FORKS-0-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="FORKS: 0" /></p>
-  <p><a href="https://github.com/OxaC2000/VERN"><img src="https://img.shields.io/badge/VIEW-REPOSITORY-A78BFA?style=for-the-badge&labelColor=1A1B27" alt="VIEW: REPOSITORY" /></a></p>
-</td>
-<td width="33%"></td>
-</tr>
-</table>
+<p align="center">
+  <a href="https://github.com/OxaC2000/OxaC2000"><img src="assets/projects/project-1.svg" width="800" alt="OxaC2000" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/OxaC2000/VERN"><img src="assets/projects/project-2.svg" width="800" alt="VERN" /></a>
+</p>
 <!-- PROJECTS:END -->
 
 ---
