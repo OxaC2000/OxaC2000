@@ -1,7 +1,7 @@
 import html
 import json
 import os
-import urllib.parse
+import textwrap
 import urllib.request
 from datetime import date
 from pathlib import Path
@@ -11,6 +11,7 @@ README = Path("README.md")
 CALENDAR = Path("assets/contribution-calendar.svg")
 STATS = Path("assets/github-stats.svg")
 LANGS = Path("assets/top-langs.svg")
+PROJECTS_DIR = Path("assets/projects")
 
 PURPLE = "#A78BFA"
 COLORS = [
@@ -47,24 +48,6 @@ def fetch_json(url, token=None):
         return json.loads(response.read().decode("utf-8"))
 
 
-def badge(label, value, color=PURPLE):
-    def escape(text):
-        text = str(text).replace("-", "--").replace("_", "__")
-        return urllib.parse.quote(text, safe="")
-
-    color = color.lstrip("#")
-
-    url = (
-        f"https://img.shields.io/badge/"
-        f"{escape(label)}-{escape(value)}-{color}"
-        f"?style=for-the-badge&labelColor=1A1B27"
-    )
-
-    alt = html.escape(f"{label}: {value}")
-
-    return f'<img src="{url}" alt="{alt}" />'
-
-
 def get_owned_repositories(token):
     url = (
         f"https://api.github.com/users/{USERNAME}/repos"
@@ -77,7 +60,7 @@ def get_owned_repositories(token):
 def get_repositories(token):
     repositories = get_owned_repositories(token)
 
-    # Forks and the portfolio repository are now allowed.
+    # Forks and the portfolio repository are allowed.
     # Only archived and disabled repositories are excluded.
     selected = [
         repo for repo in repositories
@@ -93,6 +76,112 @@ def get_repositories(token):
     return selected[:6]
 
 
+def build_project_card_svg(repo):
+    width = 800
+    height = 144
+
+    name = repo["name"]
+    if len(name) > 40:
+        name = name[:39] + "…"
+
+    description = repo.get("description") or "No description provided."
+    lines = textwrap.wrap(description, width=100)
+
+    if len(lines) > 2:
+        lines = lines[:2]
+        lines[1] = lines[1].rstrip(" .,;:")[:97] + "…"
+
+    language = repo.get("language") or "Other"
+    stars = str(repo["stargazers_count"])
+    forks = str(repo["forks_count"])
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}">',
+        f'<rect x="0.5" y="0.5" width="{width - 1}" '
+        f'height="{height - 1}" rx="22" fill="#1A1B27" '
+        f'stroke="#2A2E45"/>',
+        '<g font-family="Arial, sans-serif">',
+        f'<text x="30" y="40" fill="#B4A5F0" font-size="19" '
+        f'font-weight="700">{html.escape(name)}</text>',
+        f'<text x="{width - 30}" y="39" fill="#787C99" font-size="12" '
+        f'text-anchor="end">View repository  ›</text>',
+    ]
+
+    for index, line in enumerate(lines):
+        parts.append(
+            f'<text x="30" y="{68 + index * 19}" fill="#9AA5CE" '
+            f'font-size="13">{html.escape(line)}</text>'
+        )
+
+    pill_y = 98
+    pill_height = 28
+    x = 30
+
+    # Language pill
+    language_width = len(language) * 7 + 38
+    parts.append(
+        f'<rect x="{x}" y="{pill_y}" width="{language_width}" '
+        f'height="{pill_height}" rx="14" fill="#24283B"/>'
+    )
+    parts.append(
+        f'<circle cx="{x + 16}" cy="{pill_y + 14}" r="4.5" '
+        f'fill="#9D7CD8"/>'
+    )
+    parts.append(
+        f'<text x="{x + 28}" y="{pill_y + 18.5}" fill="#C0CAF5" '
+        f'font-size="12">{html.escape(language)}</text>'
+    )
+    x += language_width + 10
+
+    # Stars pill
+    stars_width = len(stars) * 8 + 44
+    parts.append(
+        f'<rect x="{x}" y="{pill_y}" width="{stars_width}" '
+        f'height="{pill_height}" rx="14" fill="#24283B"/>'
+    )
+    parts.append(
+        f'<polygon points="{x + 16},{pill_y + 7} '
+        f'{x + 18.4},{pill_y + 12.2} {x + 24},{pill_y + 12.8} '
+        f'{x + 19.8},{pill_y + 16.6} {x + 21},{pill_y + 22} '
+        f'{x + 16},{pill_y + 19.2} {x + 11},{pill_y + 22} '
+        f'{x + 12.2},{pill_y + 16.6} {x + 8},{pill_y + 12.8} '
+        f'{x + 13.6},{pill_y + 12.2}" fill="#8F86C9"/>'
+    )
+    parts.append(
+        f'<text x="{x + 32}" y="{pill_y + 18.5}" fill="#C0CAF5" '
+        f'font-size="12">{html.escape(stars)}</text>'
+    )
+    x += stars_width + 10
+
+    # Forks pill
+    forks_width = len(forks) * 8 + 44
+    parts.append(
+        f'<rect x="{x}" y="{pill_y}" width="{forks_width}" '
+        f'height="{pill_height}" rx="14" fill="#24283B"/>'
+    )
+    parts.append(
+        f'<g fill="none" stroke="#8F86C9" stroke-width="1.6" '
+        f'stroke-linecap="round">'
+        f'<circle cx="{x + 11}" cy="{pill_y + 8}" r="2.4"/>'
+        f'<circle cx="{x + 21}" cy="{pill_y + 8}" r="2.4"/>'
+        f'<circle cx="{x + 16}" cy="{pill_y + 21}" r="2.4"/>'
+        f'<path d="M{x + 11},{pill_y + 10.4} '
+        f'v2.6 q0,3 5,3.2 q5,-0.2 5,-3.2 v-2.6 '
+        f'M{x + 16},{pill_y + 16.2} v2.4"/>'
+        f'</g>'
+    )
+    parts.append(
+        f'<text x="{x + 32}" y="{pill_y + 18.5}" fill="#C0CAF5" '
+        f'font-size="12">{html.escape(forks)}</text>'
+    )
+
+    parts.append("</g></svg>")
+
+    return "\n".join(parts)
+
+
 def build_project_cards(repositories):
     if not repositories:
         return (
@@ -101,51 +190,33 @@ def build_project_cards(repositories):
             '</p>'
         )
 
-    cells = []
+    PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    for repo in repositories:
-        name = html.escape(repo["name"])
-        description = html.escape(
-            repo.get("description") or "No description provided."
+    # Remove cards from a previous run.
+    for old_card in PROJECTS_DIR.glob("project-*.svg"):
+        old_card.unlink()
+
+    blocks = []
+
+    for index, repo in enumerate(repositories, start=1):
+        card_path = PROJECTS_DIR / f"project-{index}.svg"
+        card_path.write_text(
+            build_project_card_svg(repo),
+            encoding="utf-8",
         )
 
         url = repo["html_url"]
-        language = repo.get("language") or "Other"
+        alt = html.escape(repo["name"])
 
-        language_badge = badge("LANGUAGE", language)
-        stars_badge = badge("STARS", repo["stargazers_count"])
-        forks_badge = badge("FORKS", repo["forks_count"])
-
-        view_badge = (
-            f'<a href="{url}">'
-            f'{badge("VIEW", "REPOSITORY")}'
-            f'</a>'
+        blocks.append(
+            '<p align="center">\n'
+            f'  <a href="{url}">'
+            f'<img src="{card_path.as_posix()}" '
+            f'width="800" alt="{alt}" /></a>\n'
+            '</p>'
         )
 
-        cell = "\n".join([
-            '<td width="33%" valign="top">',
-            '  <h3>',
-            f'    <a href="{url}">{name}</a>',
-            '  </h3>',
-            f'  <p>{description}</p>',
-            f'  <p>{language_badge}</p>',
-            f'  <p>{stars_badge} {forks_badge}</p>',
-            f'  <p>{view_badge}</p>',
-            '</td>',
-        ])
-        cells.append(cell)
-
-    rows = []
-
-    for index in range(0, len(cells), 3):
-        row = cells[index:index + 3]
-
-        while len(row) < 3:
-            row.append('<td width="33%"></td>')
-
-        rows.append("<tr>\n" + "\n".join(row) + "\n</tr>")
-
-    return "<table>\n" + "\n".join(rows) + "\n</table>"
+    return "\n".join(blocks)
 
 
 def update_readme(projects):
