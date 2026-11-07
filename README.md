@@ -42,7 +42,9 @@ My interests include Linux, local AI, web development and automation.
 
 <!-- PROJECTS:START -->
 
-*Projects are automatically updated by GitHub Actions.*
+<p align="center">
+  <i>No public projects available yet.</i>
+</p>
 
 <!-- PROJECTS:END -->
 
