@@ -1,101 +1,142 @@
- <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rounded&height=180&color=1A1B27&text=OxaC2000&fontColor=A78BFA&fontSize=48&fontAlignY=42&desc=Low-level%20thinking.%20High-level%20engineering.&descAlignY=68&descSize=16" width="100%" />
-</p>
+<div align="center">
 
-<h3 align="center">
-  Open Source Developer · Independent Developer · Linux Enthusiast
-</h3>
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=220&section=header&text=OxaC2000&fontColor=A78BFA&fontSize=64&fontAlignY=40&desc=Low-level%20thinking.%20High-level%20engineering.&descSize=20&descColor=C0CAF5&descAlignY=65" alt="OxaC2000 header" width="100%" />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/OPEN%20SOURCE-A78BFA?style=for-the-badge&logo=github&logoColor=1A1B27" />
-  <img src="https://img.shields.io/badge/LINUX-A78BFA?style=for-the-badge&logo=linux&logoColor=1A1B27" />
-  <img src="https://komarev.com/ghpvc/?username=OxaC2000&style=for-the-badge&color=A78BFA&label=PROFILE+VIEWS" />
-</p>
+**Open Source Developer** · **Independent Developer** · **Linux Enthusiast**
+
+</div>
 
 ---
 
-## About
+## 👋 About
 
-I'm an independent developer interested in understanding systems, building useful software and exploring open-source technologies.
-
-My interests include Linux, local AI, web development and automation.
+Développeur indépendant passionné par Linux, les systèmes et l'open source. J'explore l'intelligence artificielle locale, le développement web et l'automatisation Linux, avec une idée simple : comprendre ce que l'on utilise pour mieux construire.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,js,ts,bash,html,css,linux,git,github,vscode&theme=dark" />
-</p>
+<div align="center">
 
-## Linux Environments
+<img src="https://skillicons.dev/icons?i=py,js,ts,bash,html,css,git,linux&theme=dark" alt="Tech stack" />
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Fedora%20%2F%20Nobara-1A1B27?style=for-the-badge&logo=fedora&logoColor=A78BFA" />
-  <img src="https://img.shields.io/badge/EndeavourOS-1A1B27?style=for-the-badge&logo=endeavouros&logoColor=A78BFA" />
-  <img src="https://img.shields.io/badge/Gentoo-1A1B27?style=for-the-badge&logo=gentoo&logoColor=A78BFA" />
-</p>
+</div>
 
 ---
 
-## Featured Projects
+## 🐧 Linux Environments
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Fedora%20%2F%20Nobara-1A1B27?style=for-the-badge&logo=fedora&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="Fedora / Nobara" />
+<img src="https://img.shields.io/badge/EndeavourOS-1A1B27?style=for-the-badge&logo=endeavouros&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="EndeavourOS" />
+<img src="https://img.shields.io/badge/Gentoo%20Linux-1A1B27?style=for-the-badge&logo=gentoo&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="Gentoo Linux" />
+
+</div>
+
+---
+
+## 🚀 Featured Projects
 
 <!-- PROJECTS:START -->
+<div align="center">
 
-<p align="center">
-  <i>No public projects available yet.</i>
-</p>
+<em>New projects coming soon.</em>
 
+</div>
 <!-- PROJECTS:END -->
 
 ---
 
-## GitHub Overview
+## 📊 GitHub Overview
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=OxaC2000&show_icons=true&hide_border=true&border_radius=16&bg_color=1A1B27&title_color=A78BFA&icon_color=A78BFA&text_color=C0CAF5&include_all_commits=true" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OxaC2000&layout=compact&hide_border=true&border_radius=16&bg_color=1A1B27&title_color=A78BFA&text_color=C0CAF5&langs_count=8" height="180" />
-</p>
+<div align="center">
 
-## Contribution Streak
+<img src="https://github-readme-stats.vercel.app/api?username=OxaC2000&show_icons=true&rank_icon=github&hide_border=true&bg_color=1A1B27&title_color=A78BFA&text_color=C0CAF5&icon_color=A78BFA&ring_color=A78BFA&border_radius=12" alt="GitHub statistics" />
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=OxaC2000&hide_border=true&border_radius=16&background=1A1B27&ring=A78BFA&fire=A78BFA&currStreakLabel=A78BFA&sideLabels=C0CAF5&dates=787C99&currStreakNum=C0CAF5&sideNums=C0CAF5" width="75%" />
-</p>
-
-## Contribution Calendar
-
-<p align="center">
-  <img src="./assets/contribution-calendar.svg" width="100%" alt="GitHub contribution calendar" />
-</p>
-
-## GitHub Achievements
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=OxaC2000&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=6" width="100%" />
-</p>
+</div>
 
 ---
 
-## Engineering Principles
+## 💻 Most Used Languages
 
-| Principle | Description |
-|:--|:--|
-| **01 · Understand** | Understand how systems work instead of relying blindly on abstractions. |
-| **02 · Simplify** | Prefer clear, maintainable and purposeful solutions. |
-| **03 · Experiment** | Explore technologies, test ideas and learn continuously. |
-| **04 · Build** | Create useful tools and meaningful projects. |
-| **05 · Share** | Value open source, collaboration and shared knowledge. |
-| **06 · Control** | Understand and customize the environment you work in. |
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OxaC2000&layout=compact&langs_count=8&hide_border=true&bg_color=1A1B27&title_color=A78BFA&text_color=C0CAF5&border_radius=12" alt="Most used languages" />
+
+</div>
 
 ---
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rounded&height=135&color=1A1B27&section=footer&text=Low-level%20thinking.%20High-level%20engineering.&fontColor=A78BFA&fontSize=18&fontAlignY=45&desc=Built%20with%20curiosity%20%26%20open%20source.&descAlignY=70&descSize=13" width="100%" />
-</p>
+## 🔥 Contribution Streak
 
-<p align="center">
-  <a href="https://github.com/OxaC2000">
-    <img src="https://img.shields.io/badge/OxaC2000-A78BFA?style=for-the-badge&logo=github&logoColor=1A1B27" />
-  </a>
-</p>
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=OxaC2000&hide_border=true&border_radius=12&background=1A1B27&ring=A78BFA&fire=A78BFA&currStreakNum=C0CAF5&sideNums=C0CAF5&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=787C99" alt="Contribution streak" />
+
+</div>
+
+---
+
+## 🗓️ Contribution Calendar
+
+<div align="center">
+
+<img src="assets/contribution-calendar.svg" alt="Contribution calendar" width="100%" />
+
+</div>
+
+---
+
+## 🏆 GitHub Achievements
+
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=OxaC2000&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=10&margin-h=10" alt="GitHub trophies" />
+
+</div>
+
+---
+
+## 🧭 Engineering Principles
+
+<table align="center">
+  <tr>
+    <td width="33%" valign="top">
+      <h3>🔍 Understand</h3>
+      Understand how systems work instead of relying blindly on abstractions.
+    </td>
+    <td width="33%" valign="top">
+      <h3>✂️ Simplify</h3>
+      Prefer clear, maintainable and purposeful solutions.
+    </td>
+    <td width="33%" valign="top">
+      <h3>🧪 Experiment</h3>
+      Explore technologies, test ideas and learn continuously.
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">
+      <h3>🔨 Build</h3>
+      Create useful tools and meaningful projects.
+    </td>
+    <td valign="top">
+      <h3>🤝 Share</h3>
+      Value open source, collaboration and shared knowledge.
+    </td>
+    <td valign="top">
+      <h3>🎛️ Control</h3>
+      Understand and customize the environment you work in.
+    </td>
+  </tr>
+</table>
+
+---
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=160&section=footer&text=Low-level%20thinking.%20High-level%20engineering.&fontColor=A78BFA&fontSize=26&fontAlignY=60" alt="Footer" width="100%" />
+
+<a href="https://github.com/OxaC2000"><img src="https://img.shields.io/badge/GitHub-OxaC2000-1A1B27?style=for-the-badge&logo=github&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="GitHub OxaC2000" /></a>
+
+</div>
