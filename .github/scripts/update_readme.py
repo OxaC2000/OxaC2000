@@ -9,6 +9,8 @@ from pathlib import Path
 USERNAME = "OxaC2000"
 README = Path("README.md")
 CALENDAR = Path("assets/contribution-calendar.svg")
+STATS = Path("assets/github-stats.svg")
+LANGS = Path("assets/top-langs.svg")
 
 PURPLE = "#A78BFA"
 COLORS = [
@@ -17,6 +19,17 @@ COLORS = [
     "#60458D",
     "#8560BD",
     "#A78BFA",
+]
+
+LANG_COLORS = [
+    "#A78BFA",
+    "#7AA2F7",
+    "#BB9AF7",
+    "#7DCFFF",
+    "#9D7CD8",
+    "#2AC3DE",
+    "#C0CAF5",
+    "#787C99",
 ]
 
 def fetch_json(url, token=None):
@@ -52,13 +65,17 @@ def badge(label, value, color=PURPLE):
     return f'<img src="{url}" alt="{alt}" />'
 
 
-def get_repositories(token):
+def get_owned_repositories(token):
     url = (
         f"https://api.github.com/users/{USERNAME}/repos"
         "?type=owner&sort=pushed&direction=desc&per_page=100"
     )
 
-    repositories = fetch_json(url, token)
+    return fetch_json(url, token)
+
+
+def get_repositories(token):
+    repositories = get_owned_repositories(token)
 
     selected = [
         repo for repo in repositories
@@ -285,6 +302,163 @@ def build_calendar(contributions):
     return "\n".join(parts)
 
 
+def get_user(token):
+    return fetch_json(
+        f"https://api.github.com/users/{USERNAME}", token
+    )
+
+
+def get_language_totals(repositories, token):
+    totals = {}
+
+    for repo in repositories:
+        if repo["fork"] or repo["archived"] or repo["disabled"]:
+            continue
+
+        try:
+            languages = fetch_json(repo["languages_url"], token)
+        except Exception as error:
+            print(f"Skipping languages of {repo['name']}: {error}")
+            continue
+
+        for language, size in languages.items():
+            totals[language] = totals.get(language, 0) + size
+
+    return totals
+
+
+def current_streak(contributions):
+    streak = 0
+
+    for index, contribution in enumerate(reversed(contributions)):
+        if int(contribution["count"]) > 0:
+            streak += 1
+        elif index == 0:
+            # Today may not have any contribution yet.
+            continue
+        else:
+            break
+
+    return streak
+
+
+def build_stats_svg(user, repositories, contributions):
+    owned = [repo for repo in repositories if not repo["fork"]]
+
+    stars = sum(repo["stargazers_count"] for repo in owned)
+    forks = sum(repo["forks_count"] for repo in owned)
+    total = sum(int(item["count"]) for item in contributions)
+    streak = current_streak(contributions)
+
+    rows = [
+        ("Total stars", stars),
+        ("Total forks", forks),
+        ("Public repositories", user.get("public_repos", 0)),
+        ("Followers", user.get("followers", 0)),
+        ("Contributions (last 12 months)", total),
+        ("Current streak", f"{streak} days"),
+    ]
+
+    width = 495
+    height = 66 + len(rows) * 26 + 10
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}">',
+        f'<rect x="0.5" y="0.5" width="{width - 1}" '
+        f'height="{height - 1}" rx="12" fill="#1A1B27"/>',
+        '<g font-family="Arial, sans-serif">',
+        f'<text x="25" y="36" fill="#A78BFA" font-size="18" '
+        f'font-weight="700">{html.escape(USERNAME)}\'s GitHub Stats</text>',
+    ]
+
+    for index, (label, value) in enumerate(rows):
+        y = 66 + index * 26 + 14
+        parts.append(
+            f'<circle cx="31" cy="{y - 4}" r="4" fill="#A78BFA"/>'
+        )
+        parts.append(
+            f'<text x="46" y="{y}" fill="#C0CAF5" '
+            f'font-size="14">{html.escape(str(label))}:</text>'
+        )
+        parts.append(
+            f'<text x="440" y="{y}" fill="#A78BFA" font-size="14" '
+            f'font-weight="700" text-anchor="end">'
+            f'{html.escape(str(value))}</text>'
+        )
+
+    parts.append("</g></svg>")
+
+    return "\n".join(parts)
+
+
+def build_languages_svg(totals):
+    width = 495
+
+    if not totals:
+        height = 110
+        return "\n".join([
+            f'<svg xmlns="http://www.w3.org/2000/svg" '
+            f'width="{width}" height="{height}" '
+            f'viewBox="0 0 {width} {height}">',
+            f'<rect x="0.5" y="0.5" width="{width - 1}" '
+            f'height="{height - 1}" rx="12" fill="#1A1B27"/>',
+            '<g font-family="Arial, sans-serif">',
+            '<text x="25" y="36" fill="#A78BFA" font-size="18" '
+            'font-weight="700">Most Used Languages</text>',
+            '<text x="25" y="72" fill="#787C99" font-size="14">'
+            'No language data yet.</text>',
+            '</g></svg>',
+        ])
+
+    grand_total = sum(totals.values())
+    top = sorted(totals.items(), key=lambda item: -item[1])[:8]
+
+    height = 66 + len(top) * 26 + 10
+
+    bar_x = 150
+    bar_width = 260
+
+    parts = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
+        f'width="{width}" height="{height}" '
+        f'viewBox="0 0 {width} {height}">',
+        f'<rect x="0.5" y="0.5" width="{width - 1}" '
+        f'height="{height - 1}" rx="12" fill="#1A1B27"/>',
+        '<g font-family="Arial, sans-serif">',
+        '<text x="25" y="36" fill="#A78BFA" font-size="18" '
+        'font-weight="700">Most Used Languages</text>',
+    ]
+
+    for index, (language, size) in enumerate(top):
+        percent = size / grand_total * 100
+        color = LANG_COLORS[index % len(LANG_COLORS)]
+        y = 66 + index * 26
+        fill_width = max(6, round(bar_width * percent / 100))
+
+        parts.append(
+            f'<text x="25" y="{y + 13}" fill="#C0CAF5" '
+            f'font-size="13">{html.escape(language)}</text>'
+        )
+        parts.append(
+            f'<rect x="{bar_x}" y="{y + 3}" width="{bar_width}" '
+            f'height="10" rx="5" fill="#24283B"/>'
+        )
+        parts.append(
+            f'<rect x="{bar_x}" y="{y + 3}" width="{fill_width}" '
+            f'height="10" rx="5" fill="{color}"/>'
+        )
+        parts.append(
+            f'<text x="470" y="{y + 13}" fill="#787C99" '
+            f'font-size="12" text-anchor="end">{percent:.1f}%</text>'
+        )
+
+    parts.append("</g></svg>")
+
+    return "\n".join(parts)
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN")
 
@@ -303,6 +477,26 @@ def main():
         build_calendar(contributions),
         encoding="utf-8",
     )
+
+    print("Generating statistics cards...")
+
+    try:
+        user = get_user(token)
+        owned = get_owned_repositories(token)
+
+        STATS.write_text(
+            build_stats_svg(user, owned, contributions),
+            encoding="utf-8",
+        )
+
+        languages = get_language_totals(owned, token)
+
+        LANGS.write_text(
+            build_languages_svg(languages),
+            encoding="utf-8",
+        )
+    except Exception as error:
+        print(f"Warning: could not generate statistics cards: {error}")
 
     print("Portfolio successfully updated.")
 
