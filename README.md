@@ -39,11 +39,9 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 ## 🚀 Featured Projects
 
 <!-- PROJECTS:START -->
-
 <p align="center">
-  <i>No public projects available yet.</i>
+  <i>New projects coming soon.</i>
 </p>
-
 <!-- PROJECTS:END -->
 
 ---
