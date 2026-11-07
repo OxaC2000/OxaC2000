@@ -8,13 +8,13 @@
 
 ---
 
-## 👋 About
+## About
 
 Développeur indépendant passionné par Linux, les systèmes et l'open source. J'explore l'intelligence artificielle locale, le développement web et l'automatisation Linux, avec une idée simple : comprendre ce que l'on utilise pour mieux construire.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -24,7 +24,7 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 🐧 Linux Environments
+## Linux Environments
 
 <div align="center">
 
@@ -36,7 +36,7 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 🚀 Featured Projects
+## Featured Projects
 
 <!-- PROJECTS:START -->
 <p align="center">
@@ -46,27 +46,27 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 📊 GitHub Overview
+## GitHub Overview
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=OxaC2000&show_icons=true&rank_icon=github&hide_border=true&bg_color=1A1B27&title_color=A78BFA&text_color=C0CAF5&icon_color=A78BFA&ring_color=A78BFA&border_radius=12" alt="GitHub statistics" />
+<img src="assets/github-stats.svg" alt="GitHub statistics" width="495" />
 
 </div>
 
 ---
 
-## 💻 Most Used Languages
+## Most Used Languages
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OxaC2000&layout=compact&langs_count=8&hide_border=true&bg_color=1A1B27&title_color=A78BFA&text_color=C0CAF5&border_radius=12" alt="Most used languages" />
+<img src="assets/top-langs.svg" alt="Most used languages" width="495" />
 
 </div>
 
 ---
 
-## 🔥 Contribution Streak
+## Contribution Streak
 
 <div align="center">
 
@@ -76,7 +76,7 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 🗓️ Contribution Calendar
+## Contribution Calendar
 
 <div align="center">
 
@@ -86,7 +86,7 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 🏆 GitHub Achievements
+## GitHub Achievements
 
 <div align="center">
 
@@ -96,34 +96,34 @@ Développeur indépendant passionné par Linux, les systèmes et l'open source. 
 
 ---
 
-## 🧭 Engineering Principles
+## Engineering Principles
 
 <table align="center">
   <tr>
     <td width="33%" valign="top">
-      <h3>🔍 Understand</h3>
+      <h3>Understand</h3>
       Understand how systems work instead of relying blindly on abstractions.
     </td>
     <td width="33%" valign="top">
-      <h3>✂️ Simplify</h3>
+      <h3>Simplify</h3>
       Prefer clear, maintainable and purposeful solutions.
     </td>
     <td width="33%" valign="top">
-      <h3>🧪 Experiment</h3>
+      <h3>Experiment</h3>
       Explore technologies, test ideas and learn continuously.
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <h3>🔨 Build</h3>
+      <h3>Build</h3>
       Create useful tools and meaningful projects.
     </td>
     <td valign="top">
-      <h3>🤝 Share</h3>
+      <h3>Share</h3>
       Value open source, collaboration and shared knowledge.
     </td>
     <td valign="top">
-      <h3>🎛️ Control</h3>
+      <h3>Control</h3>
       Understand and customize the environment you work in.
     </td>
   </tr>
