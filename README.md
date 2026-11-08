@@ -89,16 +89,6 @@ Independent developer passionate about Linux, systems and open source. I explore
 
 ---
 
-## GitHub Achievements
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=OxaC2000&theme=tokyonight&no-frame=true&no-bg=true&column=6&margin-w=10&margin-h=10" alt="GitHub trophies" />
-
-</div>
-
----
-
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=rounded&color=1A1B27&height=160&section=footer&text=Low-level%20thinking.%20High-level%20vibe%20coding.&fontColor=A78BFA&fontSize=26&fontAlignY=60" alt="Footer" width="100%" />
