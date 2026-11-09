@@ -383,7 +383,7 @@ def get_language_totals(repositories, token):
     totals = {}
 
     for repo in repositories:
-        if repo["fork"] or repo["archived"] or repo["disabled"]:
+        if repo["archived"] or repo["disabled"]:
             continue
 
         try:
