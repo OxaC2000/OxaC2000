@@ -33,6 +33,43 @@ LANG_COLORS = [
     "#787C99",
 ]
 
+EXTENSIONS = {
+    ".py": "Python",
+    ".js": "JavaScript",
+    ".mjs": "JavaScript",
+    ".cjs": "JavaScript",
+    ".jsx": "JavaScript",
+    ".ts": "TypeScript",
+    ".tsx": "TypeScript",
+    ".html": "HTML",
+    ".htm": "HTML",
+    ".css": "CSS",
+    ".scss": "SCSS",
+    ".sh": "Shell",
+    ".bash": "Shell",
+    ".zsh": "Shell",
+    ".md": "Markdown",
+    ".json": "JSON",
+    ".yml": "YAML",
+    ".yaml": "YAML",
+    ".toml": "TOML",
+    ".rs": "Rust",
+    ".go": "Go",
+    ".c": "C",
+    ".h": "C",
+    ".cpp": "C++",
+    ".hpp": "C++",
+    ".cs": "C#",
+    ".java": "Java",
+    ".kt": "Kotlin",
+    ".rb": "Ruby",
+    ".php": "PHP",
+    ".lua": "Lua",
+    ".sql": "SQL",
+    ".nix": "Nix",
+    ".ebuild": "Ebuild",
+}
+
 def fetch_json(url, token=None):
     headers = {
         "User-Agent": "OxaC2000-GitHub-Portfolio",
@@ -380,20 +417,50 @@ def get_user(token):
 
 
 def get_language_totals(repositories, token):
+    """Count the size of every recognised file, by extension.
+
+    Unlike the GitHub 'languages' API, this also counts Markdown,
+    JSON, YAML and other non-programming file types.
+    """
     totals = {}
 
     for repo in repositories:
         if repo["archived"] or repo["disabled"]:
             continue
 
+        branch = repo.get("default_branch") or "main"
+        url = (
+            f"https://api.github.com/repos/{USERNAME}/"
+            f"{repo['name']}/git/trees/{branch}?recursive=1"
+        )
+
         try:
-            languages = fetch_json(repo["languages_url"], token)
+            tree = fetch_json(url, token)
         except Exception as error:
             print(f"Skipping languages of {repo['name']}: {error}")
             continue
 
-        for language, size in languages.items():
-            totals[language] = totals.get(language, 0) + size
+        counted = 0
+
+        for item in tree.get("tree", []):
+            if item.get("type") != "blob":
+                continue
+
+            path = item["path"]
+
+            # Ignore generated and third-party files.
+            if path.startswith("assets/") or "node_modules/" in path:
+                continue
+
+            language = EXTENSIONS.get(Path(path).suffix.lower())
+
+            if not language:
+                continue
+
+            totals[language] = totals.get(language, 0) + item.get("size", 0)
+            counted += 1
+
+        print(f"{repo['name']}: {counted} files counted")
 
     return totals
 
