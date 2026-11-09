@@ -1,17 +1,9 @@
-def get_language_totals(repositories, token):
-    totals = {}
-
-    for repo in repositories:
-        if repo["archived"] or repo["disabled"]:
-            continue
-
-        try:
-            languages = fetch_json(repo["languages_url"], token)
-        except Exception as error:
-            print(f"Skipping languages of {repo['name']}: {error}")
-            continue
-
-        for language, size in languages.items():
-            totals[language] = totals.get(language, 0) + size
-
-    return totals
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="110" viewBox="0 0 495 110">
+<rect x="0.5" y="0.5" width="494" height="109" rx="12" fill="
+#1A1B27"/>
+<g font-family="Arial, sans-serif">
+<text x="25" y="36" fill="
+#A78BFA" font-size="18" font-weight="700">Most Used Languages</text>
+<text x="25" y="72" fill="
+#787C99" font-size="14">No language data yet.</text>
+</g></svg>
