@@ -73,7 +73,7 @@ Independent developer passionate about Linux, systems and open source. I explore
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=OxaC2000&hide_border=true&border_radius=12&background=1A1B27&ring=A78BFA&fire=A78BFA&currStreakNum=C0CAF5&sideNums=C0CAF5&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=787C99" alt="Contribution streak" />
+<img src="https://streak-stats.demolab.com?user=OxaC2000&hide_border=true&border_radius=12&background=1A1B27&ring=A78BFA&fire=A78BFA&currStreakNum=C0CAF5&sideNums=C0CAF5&currStreakLabel=C4B5FD&sideLabels=C4B5FD&dates=787C99&v=20261111" alt="Contribution streak" />
 
 </div>
 
