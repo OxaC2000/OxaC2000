@@ -86,7 +86,7 @@ Independent developer passionate about Linux, systems and open source. I explore
 
 <div align="center">
 
-<img src="assets/contribution-calendar.svg" alt="Contribution calendar" width="100%" />
+<img src="assets/contribution-calendar.svg?v=20261111" alt="Contribution calendar" width="100%" />
 
 </div>
 
