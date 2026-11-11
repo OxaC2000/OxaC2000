@@ -9,7 +9,7 @@
 <text x="58" y="116.5" fill="#C0CAF5" font-size="12">Other</text>
 <rect x="113" y="98" width="52" height="28" rx="14" fill="#24283B"/>
 <polygon points="129,105 131.4,110.2 137,110.8 132.8,114.6 134,120 129,117.2 124,120 125.2,114.6 121,110.8 126.6,110.2" fill="#8F86C9"/>
-<text x="145" y="116.5" fill="#C0CAF5" font-size="12">0</text>
+<text x="145" y="116.5" fill="#C0CAF5" font-size="12">1</text>
 <rect x="175" y="98" width="52" height="28" rx="14" fill="#24283B"/>
 <g fill="none" stroke="#8F86C9" stroke-width="1.6" stroke-linecap="round"><circle cx="186" cy="106" r="2.4"/><circle cx="196" cy="106" r="2.4"/><circle cx="191" cy="119" r="2.4"/><path d="M186,108.4 v2.6 q0,3 5,3.2 q5,-0.2 5,-3.2 v-2.6 M191,114.2 v2.4"/></g>
 <text x="207" y="116.5" fill="#C0CAF5" font-size="12">0</text>

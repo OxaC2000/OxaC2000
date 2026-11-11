@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="258" viewBox="0 0 495 258">
-<rect x="0.5" y="0.5" width="494" height="257" rx="12" fill="#1A1B27"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="284" viewBox="0 0 495 284">
+<rect x="0.5" y="0.5" width="494" height="283" rx="12" fill="#1A1B27"/>
 <g font-family="Arial, sans-serif">
 <text x="25" y="36" fill="#A78BFA" font-size="18" font-weight="700">Most Used Languages</text>
 <text x="25" y="79" fill="#C0CAF5" font-size="13">JSON</text>
 <rect x="150" y="69" width="260" height="10" rx="5" fill="#24283B"/>
-<rect x="150" y="69" width="242" height="10" rx="5" fill="#A78BFA"/>
-<text x="470" y="79" fill="#787C99" font-size="12" text-anchor="end">93.0%</text>
+<rect x="150" y="69" width="241" height="10" rx="5" fill="#A78BFA"/>
+<text x="470" y="79" fill="#787C99" font-size="12" text-anchor="end">92.6%</text>
 <text x="25" y="105" fill="#C0CAF5" font-size="13">HTML</text>
 <rect x="150" y="95" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="95" width="7" height="10" rx="5" fill="#7AA2F7"/>
 <text x="470" y="105" fill="#787C99" font-size="12" text-anchor="end">2.6%</text>
 <text x="25" y="131" fill="#C0CAF5" font-size="13">Markdown</text>
 <rect x="150" y="121" width="260" height="10" rx="5" fill="#24283B"/>
-<rect x="150" y="121" width="6" height="10" rx="5" fill="#BB9AF7"/>
+<rect x="150" y="121" width="7" height="10" rx="5" fill="#BB9AF7"/>
 <text x="470" y="131" fill="#787C99" font-size="12" text-anchor="end">2.5%</text>
 <text x="25" y="157" fill="#C0CAF5" font-size="13">Python</text>
 <rect x="150" y="147" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="147" width="6" height="10" rx="5" fill="#7DCFFF"/>
-<text x="470" y="157" fill="#787C99" font-size="12" text-anchor="end">1.0%</text>
+<text x="470" y="157" fill="#787C99" font-size="12" text-anchor="end">1.4%</text>
 <text x="25" y="183" fill="#C0CAF5" font-size="13">JavaScript</text>
 <rect x="150" y="173" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="173" width="6" height="10" rx="5" fill="#9D7CD8"/>
@@ -30,4 +30,8 @@
 <rect x="150" y="225" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="225" width="6" height="10" rx="5" fill="#C0CAF5"/>
 <text x="470" y="235" fill="#787C99" font-size="12" text-anchor="end">0.0%</text>
+<text x="25" y="261" fill="#C0CAF5" font-size="13">TOML</text>
+<rect x="150" y="251" width="260" height="10" rx="5" fill="#24283B"/>
+<rect x="150" y="251" width="6" height="10" rx="5" fill="#787C99"/>
+<text x="470" y="261" fill="#787C99" font-size="12" text-anchor="end">0.0%</text>
 </g></svg>
