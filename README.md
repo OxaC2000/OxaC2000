@@ -29,7 +29,7 @@ Independent developer passionate about Linux, systems and open source. I explore
 <div align="center">
 
 <img src="https://img.shields.io/badge/CachyOS-1A1B27?style=for-the-badge&logo=cachyos&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="CachyOS" />
-<img src="https://img.shields.io/badge/EndeavourOS-1A1B27?style=for-the-badge&logo=endeavouros&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="EndeavourOS" />
+<img src="https://img.shields.io/badge/NixOS-1A1B27?style=for-the-badge&logo=nixos&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="NixOS" />
 <img src="https://img.shields.io/badge/Gentoo%20Linux-1A1B27?style=for-the-badge&logo=gentoo&logoColor=A78BFA&labelColor=1A1B27&color=A78BFA" alt="Gentoo Linux" />
 
 </div>
