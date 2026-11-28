@@ -40,13 +40,16 @@ Independent developer passionate about Linux, systems and open source. I explore
 
 <!-- PROJECTS:START -->
 <p align="center">
-  <a href="https://github.com/OxaC2000/OxaC2000"><img src="assets/projects/project-1.svg" width="800" alt="OxaC2000" /></a>
+  <a href="https://github.com/OxaC2000/most-racist-rice-V2"><img src="assets/projects/project-1.svg" width="800" alt="most-racist-rice-V2" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/OxaC2000/cavactl"><img src="assets/projects/project-2.svg" width="800" alt="cavactl" /></a>
+  <a href="https://github.com/OxaC2000/OxaC2000"><img src="assets/projects/project-2.svg" width="800" alt="OxaC2000" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/OxaC2000/VERN"><img src="assets/projects/project-3.svg" width="800" alt="VERN" /></a>
+  <a href="https://github.com/OxaC2000/cavactl"><img src="assets/projects/project-3.svg" width="800" alt="cavactl" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/OxaC2000/VERN"><img src="assets/projects/project-4.svg" width="800" alt="VERN" /></a>
 </p>
 <!-- PROJECTS:END -->
 

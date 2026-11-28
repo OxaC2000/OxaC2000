@@ -4,34 +4,34 @@
 <text x="25" y="36" fill="#A78BFA" font-size="18" font-weight="700">Most Used Languages</text>
 <text x="25" y="79" fill="#C0CAF5" font-size="13">JSON</text>
 <rect x="150" y="69" width="260" height="10" rx="5" fill="#24283B"/>
-<rect x="150" y="69" width="241" height="10" rx="5" fill="#A78BFA"/>
-<text x="470" y="79" fill="#787C99" font-size="12" text-anchor="end">92.9%</text>
-<text x="25" y="105" fill="#C0CAF5" font-size="13">HTML</text>
+<rect x="150" y="69" width="239" height="10" rx="5" fill="#A78BFA"/>
+<text x="470" y="79" fill="#787C99" font-size="12" text-anchor="end">92.0%</text>
+<text x="25" y="105" fill="#C0CAF5" font-size="13">Markdown</text>
 <rect x="150" y="95" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="95" width="6" height="10" rx="5" fill="#7AA2F7"/>
 <text x="470" y="105" fill="#787C99" font-size="12" text-anchor="end">2.5%</text>
-<text x="25" y="131" fill="#C0CAF5" font-size="13">Markdown</text>
+<text x="25" y="131" fill="#C0CAF5" font-size="13">HTML</text>
 <rect x="150" y="121" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="121" width="6" height="10" rx="5" fill="#BB9AF7"/>
-<text x="470" y="131" fill="#787C99" font-size="12" text-anchor="end">2.4%</text>
+<text x="470" y="131" fill="#787C99" font-size="12" text-anchor="end">2.5%</text>
 <text x="25" y="157" fill="#C0CAF5" font-size="13">Python</text>
 <rect x="150" y="147" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="147" width="6" height="10" rx="5" fill="#7DCFFF"/>
-<text x="470" y="157" fill="#787C99" font-size="12" text-anchor="end">1.4%</text>
+<text x="470" y="157" fill="#787C99" font-size="12" text-anchor="end">1.3%</text>
 <text x="25" y="183" fill="#C0CAF5" font-size="13">JavaScript</text>
 <rect x="150" y="173" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="173" width="6" height="10" rx="5" fill="#9D7CD8"/>
 <text x="470" y="183" fill="#787C99" font-size="12" text-anchor="end">0.8%</text>
-<text x="25" y="209" fill="#C0CAF5" font-size="13">YAML</text>
+<text x="25" y="209" fill="#C0CAF5" font-size="13">Lua</text>
 <rect x="150" y="199" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="199" width="6" height="10" rx="5" fill="#2AC3DE"/>
-<text x="470" y="209" fill="#787C99" font-size="12" text-anchor="end">0.0%</text>
+<text x="470" y="209" fill="#787C99" font-size="12" text-anchor="end">0.5%</text>
 <text x="25" y="235" fill="#C0CAF5" font-size="13">Shell</text>
 <rect x="150" y="225" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="225" width="6" height="10" rx="5" fill="#C0CAF5"/>
-<text x="470" y="235" fill="#787C99" font-size="12" text-anchor="end">0.0%</text>
-<text x="25" y="261" fill="#C0CAF5" font-size="13">TOML</text>
+<text x="470" y="235" fill="#787C99" font-size="12" text-anchor="end">0.2%</text>
+<text x="25" y="261" fill="#C0CAF5" font-size="13">CSS</text>
 <rect x="150" y="251" width="260" height="10" rx="5" fill="#24283B"/>
 <rect x="150" y="251" width="6" height="10" rx="5" fill="#787C99"/>
-<text x="470" y="261" fill="#787C99" font-size="12" text-anchor="end">0.0%</text>
+<text x="470" y="261" fill="#787C99" font-size="12" text-anchor="end">0.1%</text>
 </g></svg>
